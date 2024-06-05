@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "5d046a36-352d-4e8d-b87e-7659a7cf5681",
+		"name": "User Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34061551"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"aditya\",\n\"password\": \"passwordis21\",\n\"password2\":\"passwordis21\",\n\"email\":\"adipatel93275@gmail.com\",\n\"tc\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/register/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"email\":\"newemail@example.com\",\n\"password\":\"passwordis21\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/login/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTc0MjE1LCJpYXQiOjE3MTc1NzI0MTUsImp0aSI6ImUxNGNkMGVjZTFlNTQ2OWQ5MWI2NzhjZjBiOGNlODgyIiwidXNlcl9pZCI6Mn0.MQuYD3Gy9_pA_MR3wBIjadRthhnZAHWPIJvBtsBB-B0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/profile/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTc0MjUyLCJpYXQiOjE3MTc1NzI0NTIsImp0aSI6ImI1MzAwYWFkOWVmMzQ4MWNhM2FiNDBjMzM4NGQwZTU0IiwidXNlcl9pZCI6Mn0.ltGWMCH5k_WbhV5KP1wcybyzDpLHZ3fegqqwRX_wdfs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Aditya Patel\",\n    \"email\": \"adilnxct@gmail.com.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/profile/update/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTcxNDczLCJpYXQiOjE3MTc1Njk2NzMsImp0aSI6IjA1NGY3ODgxYWQ5YTQ2MWU4NzNiYjJjNzBkNjlmYzQ2IiwidXNlcl9pZCI6Mn0.mJZUH363NUZlcygCK7JCycB7zklPQKoXR7PdBNC3yH8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{local}}/api/user/changepassword/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"changepassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Password Reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTc1OTE3LCJpYXQiOjE3MTc1NzQxMTcsImp0aSI6ImMwN2I1OWZjZWNiZjQ2YzY5Mzk4ODJmMzYyYjVjNmJmIiwidXNlcl9pZCI6Mn0.tlJ1VZ_-bW5kNCCsywlGuYhj7167l4fkraPL_zkYpHI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"adilnxct1234@gmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/user/request-password-reset/",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"request-password-reset",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
