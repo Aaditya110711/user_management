@@ -1,0 +1,23 @@
+{% extends 'admin_customize/base.html' %}
+
+{% block title %}User List{% endblock %}
+
+{% block content %}
+<h2>User List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
