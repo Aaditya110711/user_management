@@ -50,7 +50,7 @@ The API server will start using the default port `8000`.
 
 ## ✨ API
 
-For a fast set up, use this POSTMAN file: [Api_sample](https://github.com/Aaditya110711/social-networking-application/blob/master/User Management.postman_collection.json)
+For a fast set up, use this POSTMAN file: [Api_sample](https://github.com/Aaditya110711/user_management/blob/master/User Management.postman_collection.json)
 
 > **Register** - `api/user/signup/`
 
